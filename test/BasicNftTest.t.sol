@@ -6,9 +6,7 @@ import {BasicNft} from "../src/BasicNft.sol";
 import {Test} from "forge-std/Test.sol";
 import {DeployOurBasicNft} from "../script/DeployBasicNft.s.sol";
 
-
 contract BasicNftTest is Test {
-
     BasicNft public basicNft;
     DeployOurBasicNft public deployer;
     address public USER = makeAddr("USER");
@@ -28,7 +26,7 @@ contract BasicNftTest is Test {
         assert(namesMatch);
     }
 
-    function testCanMintAndHaveBalance() public  {
+    function testCanMintAndHaveBalance() public {
         vm.prank(USER);
         basicNft.mintNFT(PUG_URI);
 
@@ -39,11 +37,6 @@ contract BasicNftTest is Test {
         vm.prank(USER);
         basicNft.mintNFT(PUG_URI);
 
-        assert(
-            keccak256(abi.encodePacked(basicNft.tokenURI(0))) ==
-            keccak256(abi.encodePacked(PUG_URI))
-        );
+        assert(keccak256(abi.encodePacked(basicNft.tokenURI(0))) == keccak256(abi.encodePacked(PUG_URI)));
     }
-
-
 }
