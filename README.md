@@ -6,6 +6,7 @@ For now playing with
 
 1. An IPFS Hosted NFT 
 2. An SVG NFT (Hosted 100% on-chain) 
+3. ERC1155 Deployed (https://sepolia.etherscan.io/address/0x6ca9c9d5f64082c69b99bc78956c509c1374ca15#code)
 
 <br/>
 <p align="center">
