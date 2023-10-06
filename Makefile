@@ -51,3 +51,7 @@ mintMoodNft:
 flipMoodNft:
 	@forge script script/Interactions.s.sol:FlipMoodNft $(NETWORK_ARGS)
 
+deployMyERC1155:
+	@forge script script/DeployMyERC1155.s.sol:DeployMyERC1155 $(NETWORK_ARGS)
+
+
